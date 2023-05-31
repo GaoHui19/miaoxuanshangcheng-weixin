@@ -4,6 +4,7 @@
         "ignore": [],
         "include": []
     },
+    "cloudfunctionRoot": "cloudfunctions/",
     "setting": {
         "bundle": false,
         "userConfirmedBundleSwitch": false,

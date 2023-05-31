@@ -1,1 +1,457 @@
 /* pages/home/home.wxss */
+/* 搜索 */
+.scroll-container {
+	width: 100%;
+  }
+  
+  .container-sou {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #f0f0f0;
+  }
+  
+  .box-container {
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* 调整为两端对齐 */
+	margin-bottom: 20rpx;
+  }
+  
+  .search-bar {
+	width: calc(90% / 10 * 9);
+	height: 60rpx;
+	display: flex;
+	align-items: center;
+	background-color: #ffffff;
+	border-radius: 30rpx;
+	padding: 0 20rpx; /* 调整内边距 */
+	box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  }
+  
+  .search-icon {
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 10rpx;
+  }
+  
+  .search-input {
+	flex: 1;
+	height: 100%;
+	border: none;
+	outline: none;
+	font-size: 28rpx;
+	border: #ff4d4f;
+  }
+  
+  .search-button {
+	width: 120rpx;
+	height: 100%;
+	background-color: #ff4d4f; /* 红色背景 */
+	color: #ffffff;
+	border: none;
+	outline: none;
+	border-radius: 30rpx;
+	font-size: 28rpx;
+	cursor: pointer;
+  }
+  
+  .lottery {
+	width: calc(90% / 5);
+	height: 60rpx;
+	background: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40rpx;
+	color: #ff4d4f; /* 红色字体 */
+	border-radius: 30rpx;
+	border: 2rpx solid #cccccc;
+	box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  }
+  
+  /* 选项卡 */
+.set {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon-fenxiang {
+  color: #dfdfdf;
+}
+
+.lab > icon {
+  margin-left: 4%;
+  margin-top: 1%;
+}
+
+.lab > input {
+  margin-left: 1%;
+  margin-top: 1%;
+  width: 64%;
+}
+
+.searchs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20rpx;
+}
+
+.lab {
+  width: 80%;
+  display: flex;
+  justify-content: start;
+  border: 4rpx solid red;
+  border-radius: 100rpx;
+}
+
+.lab > button {
+  height: 60rpx;
+  font-size: 40rpx;
+  line-height: 60rpx;
+  border-radius: 100rpx;
+}
+
+.fenx {
+  /* margin-top: 1%; */
+  height: 60rpx;
+  font-size: 40rpx;
+  line-height: 60rpx;
+  border-radius: 100rpx;
+  font-size: 22rpx;
+}
+
+.active {
+  color: orange;
+  border-bottom: 7rpx solid orange;
+  padding-bottom: 4rpx;
+  font-size: 30rpx;
+}
+
+.fl {
+  color: red;
+}
+
+.sw {
+  width: 90%;
+  height: 240rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sw swiper-item {
+  background-color: orange;
+}
+
+.navi {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+
+.navi view {
+  width: 23%;
+  text-align: center;
+  margin-bottom: 10rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.navi image {
+  width: 80%;
+  display: block;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+  margin: 0 auto;
+}
+
+.bk {
+  width: 90%;
+  margin: 0 auto;
+  /* background-color:wheat; */
+  display: flex;
+  justify-content: space-around;
+  height: 174rpx;
+  margin-top: 20rpx;
+}
+
+.tj {
+  width: 90%;
+  height: 1000rpx;
+  margin: 0 auto;
+}
+
+.menu_box {
+  display: flex;
+  height: 100rpx;
+}
+
+.menu {
+  color: black;
+  font-size: 24rpx;
+  text-align: center;
+  width: 180rpx;
+  height: 80rpx;
+}
+
+.borders {
+  border-bottom: 4rpx solid #f00;
+  color: #f00;
+}
+
+.tab1,
+.tab2 {
+  height: 800rpx;
+  background: #23bff3;
+}
+
+.tab2 {
+  background: #ccc;
+  height: 800rpx;
+}
+
+.tab3 {
+  background: #b11010;
+  height: 800rpx;
+}
+
+.tab4 {
+  background: #460000;
+  height: 800rpx;
+}
+
+.tab5 {
+  background: #eb6d6d;
+  height: 800rpx;
+}
+
+.bk1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bk2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bk image {
+  width: 105rpx;
+  height: 105rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+
+.bkz {
+  font-size: 20rpx;
+  color: #534f4f;
+  margin-top: 10rpx;
+}
+
+.bk button {
+  font-size: 18rpx;
+  width: 110rpx;
+  margin-top: 20rpx;
+  background-color: red;
+}
+
+.jrxj {
+  width: 100%;
+  height: 380rpx;
+}
+
+.jrxj image {
+  width: 100%;
+  height: 60rpx;
+}
+
+.fszq {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.fszq image {
+  width: 100%;
+  height: 150rpx;
+}
+
+.yfzq {
+  height: 2240rpx;
+}
+
+.yfsj {
+  height: 2140rpx;
+}
+
+.yfzq button {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.nvszx {
+  width: 90%;
+  height: 1300rpx;
+  margin: 0 auto;
+}
+
+.nvszx image {
+  width: 100%;
+  height: 150rpx;
+}
+
+.nsxg {
+  width: 90%;
+  margin: 0 auto;
+  height: 1300rpx;
+}
+
+.nsxg image {
+  width: 100%;
+  height: 150rpx;
+}
+
+.mzgh {
+  width: 90%;
+  margin: 0 auto;
+  height: 1300rpx;
+}
+
+.mzgh image {
+  width: 100%;
+  height: 150rpx;
+}
+
+.jjhw {
+  width: 90%;
+  height: 1300rpx;
+  margin: 0 auto;
+}
+
+.jjhw image {
+  width: 100%;
+  height: 150rpx;
+}
+
+.super {
+  width: 90%;
+  margin: 20rpx auto;
+  display: flex;
+}
+
+.super .superText {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20rpx 0;
+}
+
+.super .superText .superHeader text {
+  font-size: 36rpx;
+  font-weight: 900;
+}
+
+.super .superText .superHeader view {
+  display: inline-block;
+  margin-left: 20rpx;
+  background-color: orange;
+  font-size: 24rpx;
+  padding: 5rpx 20rpx;
+  color: #fff;
+  border-radius: 25rpx;
+}
+
+.super .superText .cont {
+  margin-top: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 150px;
+  font-size: 26rpx;
+  color: orange;
+}
+
+.super .superText .conimg {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.super .superText .conimg image {
+  width: 100%;
+}
+
+.superShop {
+  width: 90%;
+  margin: 0 auto 40rpx;
+}
+
+.superShop > image {
+  width: 100%;
+  border-radius: 40rpx;
+}
+
+.superShop .Text {
+  margin-top: 20rpx;
+}
+
+.superShop .Text .shopName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.superShop .Text .shopName .name {
+  font-weight: 900;
+}
+
+.superShop .Text .shopName .button {
+  font-size: 24rpx;
+  background-color: orchid;
+  padding: 5rpx 20rpx;
+  border-radius: 20rpx;
+  color: #fff;
+}
+
+.superShop .Text .sales {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.superShop .Text .sales .seven {
+  padding: 5rpx 20rpx;
+  border: 1px solid #f00;
+  display: inline-block;
+  color: #f00;
+}
+
+.superShop .Text .sales text:last-child {
+  padding: 6rpx 0;
+}
+
+.superShop .Text .superShopUl {
+  margin: 20rpx auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.superShop .Text .superShopUl .superShopLi {
+  width: 30%;
+  height: 300rpx;
+}
+
+.superShop .Text .superShopUl .superShopLi image {
+  width: 80%;
+  display: block;
+  margin: 0 auto 20rpx;
+}

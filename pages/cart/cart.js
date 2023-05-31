@@ -1,66 +1,76 @@
-// pages/cart/cart.js
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
-
+      cartItems: [
+        {
+          id: 1,
+          name: '商品1',
+          image: '/images/product1.jpg',
+          qty: 1,
+          price: 100,
+          selected: true
+        },
+        {
+          id: 2,
+          name: '商品2',
+          image: '/images/product2.jpg',
+          qty: 2,
+          price: 200,
+          selected: true
+        },
+        {
+          id: 3,
+          name: '商品3',
+          image: '/images/product3.jpg',
+          qty: 3,
+          price: 300,
+          selected: false
+        }
+      ],
+      selectAll: false
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad(options) {
-
+    onLoad: function () {
+      this.updateTotalAmount();
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
+    toggleSelectItem: function (event) {
+      const item = event.currentTarget.dataset.item;
+      const index = this.data.cartItems.findIndex(i => i.id === item.id);
+      this.setData({
+        [`cartItems[${index}].selected`]: !item.selected
+      });
+      this.updateSelectAll();
+      this.updateTotalAmount();
     },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
+    toggleSelectAll: function (event) {
+      const selectAll = event.detail.value;
+      this.setData({
+        selectAll: selectAll,
+        cartItems: this.data.cartItems.map(item => {
+          item.selected = selectAll;
+          return item;
+        })
+      });
+      this.updateTotalAmount();
     },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
+    updateSelectAll: function () {
+      const allSelected = this.data.cartItems.every(item => item.selected);
+      const selectAll = (this.data.cartItems.length > 0) && allSelected;
+      this.setData({
+        selectAll: selectAll
+      });
     },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
+    updateTotalAmount: function () {
+      let totalAmount = 0;
+      this.data.cartItems.forEach(item => {
+        if (item.selected) {
+          totalAmount += item.qty * item.price;
+        }
+      });
+      this.setData({
+        totalAmount: totalAmount.toFixed(2)
+      });
     },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
+    checkout: function () {
+      // TODO: 提交订单或结算购物车中的商品
     }
-})
+  })
+  

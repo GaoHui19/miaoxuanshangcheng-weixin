@@ -1,2 +1,30 @@
 <!--pages/cart/cart.wxml-->
 <text>pages/cart/cart.wxml</text>
+
+<view class="cart">
+  <view class="cart-header">
+    <text class="cart-header-title">商品信息</text>
+    <text class="cart-header-qty">数量</text>
+    <text class="cart-header-price">单价</text>
+    <text class="cart-header-subtotal">小计</text>
+  </view>
+  <scroll-view class="cart-items" scroll-y="true">
+    <block wx:for="{{cartItems}}" wx:key="id">
+      <view class="cart-item">
+        <checkbox class="cart-item-checkbox" value="{{item.selected}}" bindchange="toggleSelectItem" data-item="{{item}}"></checkbox>
+        <image class="cart-item-image" src="{{item.image}}"></image>
+        <text class="cart-item-name">{{item.name}}</text>
+        <text class="cart-item-qty">{{item.qty}}</text>
+        <text class="cart-item-price">{{item.price}}</text>
+        <text class="cart-item-subtotal">{{item.subtotal}}</text>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="cart-footer">
+    <checkbox class="cart-select-all" value="{{selectAll}}" bindchange="toggleSelectAll"></checkbox>
+    <text class="cart-select-all-label">全选</text>
+    <text class="cart-total-label">合计：</text>
+    <text class="cart-total-amount">{{totalAmount}}</text>
+    <button class="cart-checkout" bindtap="checkout">结算</button>
+  </view>
+</view>

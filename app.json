@@ -3,12 +3,16 @@
     "pages/home/home",
     "pages/cart/cart",
     "pages/my/my",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/category/category",
+    "pages/clothing/clothing"
+
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "妙选商城",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
@@ -31,5 +35,9 @@
       "selectedIconPath": "/image/tabbar/my2.png"
     }]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+  }
 }

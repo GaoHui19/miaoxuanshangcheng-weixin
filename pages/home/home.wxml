@@ -1,2 +1,325 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="container">
+  <scroll-view class="scroll-container" scroll-y bindscroll="onScroll">
+    <view class="container-sou">
+      <view class="box-container" id="boxContainer">
+        <view class="search-bar">
+          <image class="search-icon" src=""></image>
+          <input class="search-input" bindinput="onInputChange" bindtap="onSearch" placeholder="请输入关键字"></input>
+          <button class="search-button" bindtap="onSearch">搜索</button>
+        </view>
+        <button class="lottery" open-type="share" >分享</button>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="set">
+	<view class='{{currentData==1? "active":""}}' data-current="1" bindtap="ChangeTab">
+		<view>工厂好货</view>
+	</view>
+	<view class='{{currentData==0? "active":""}}' data-current="0" bindtap="ChangeTab">
+		<view>
+			品牌热卖</view>
+	</view>
+	<view>
+		<view>
+			<navigator url="/pages/clothing/clothing"> 服饰专区</navigator>
+		</view>
+	</view>
+	<view class='{{currentData==3? "active":""}}  fl' data-current="3" bindtap="changesel">
+		<navigator url="/pages/category/category">
+			<view>分类 <text class="iconfont icon-fenlei"></text></view>
+		</navigator>
+
+	</view>
+</view>
+<view class="tb" hidden="{{currentData != 1}}">
+	<swiper class="sw" autoplay="true" indicator-dots="true" circular="true">
+		<swiper-item>
+			1
+
+		</swiper-item>
+		<swiper-item>
+			2
+		</swiper-item>
+		<swiper-item>
+			3
+		</swiper-item>
+		<swiper-item>
+			4
+		</swiper-item>
+		<swiper-item>
+			5
+		</swiper-item>
+		<swiper-item>
+			6
+		</swiper-item>
+
+
+
+	</swiper>
+	<view class="navi">
+		<view>
+			<navigator url="">
+				<image src="/image/navi-1png.png" mode="" />
+				<text>服饰鞋包</text>
+			</navigator>
+		</view>
+		<view>
+			<navigator url="">
+				<image src="/image/navi-1png.png" mode="" />
+				<text>居家生活</text>
+			</navigator>
+		</view>
+		<view>
+			<navigator url="">
+				<image src="/image/navi-1png.png" mode="" />
+				<text>图书绘本</text>
+			</navigator>
+		</view>
+		<view>
+			<navigator url="">
+				<image src="/image/navi-1png.png" mode="" />
+				<text>数码家电</text>
+			</navigator>
+		</view>
+		<view>
+			<navigator url="">
+				<image src="/image/navi-1png.png" mode="" />
+				<text>美妆个护</text>
+			</navigator>
+		</view>
+		<view>
+			<navigator url="">
+				<image src="/image/navi-1png.png" mode="" />
+				<text>母婴亲子</text>
+			</navigator>
+		</view>
+
+		<view>
+			<navigator url="">
+				<image src="/image/navi-1png.png" mode="" />
+				<text>美食一览</text>
+			</navigator>
+		</view>
+		<view>
+			<navigator url="">
+				<image src="/image/navi-1png.png" mode="" />
+				<text>更多好货</text>
+			</navigator>
+		</view>
+	</view>
+
+	<view class="bk">
+		<view class="bk1">
+			<view>
+				<rich-text nodes="<h4>超级爆品</h4>" />
+				<view class="bkz">
+					爆款工厂好货
+				</view>
+				<button>GO ></button>
+			</view>
+			<view>
+				<image src="/image/bk-1.png" mode="" />
+			</view>
+		</view>
+		<view class="bk2">
+			<view>
+				<rich-text nodes="<h4>超级爆品</h4>" />
+				<view class="bkz">
+					爆款工厂好货
+				</view>
+				<button>GO ></button>
+			</view>
+			<view>
+				<image src="/image/bk-2.png" mode="" />
+			</view>
+		</view>
+	</view>
+	<view class="tj">
+		<view class="menu_box">
+			<view class='menu1 {{menuTapCurrent=="0"? "active":""}}  menu   ' data-current="0" catchtap="menuTap">
+				<view>
+					5/28
+				</view>
+				<view>
+					爆品特卖
+				</view>
+			</view>
+			<view class='menu2 {{menuTapCurrent=="1"? "active":""}}  menu   ' data-current="1" catchtap="menuTap">
+				<view>
+					5/29
+				</view>
+				<view>
+					爆品特卖
+				</view>
+			</view>
+			<view class='menu3 {{menuTapCurrent=="2"? "active":""}}  menu   ' data-current="2" catchtap="menuTap">
+				<view>
+					5/30
+				</view>
+				<view>
+					爆品特卖
+				</view>
+			</view>
+			<view class='menu4 {{menuTapCurrent=="3"? "active":""}}  menu   ' data-current="3" catchtap="menuTap">
+				<view>
+					5/31
+				</view>
+				<view>
+					爆品特卖
+				</view>
+			</view>
+			<view class='menu5 {{menuTapCurrent=="4"? "active":""}}  menu   ' data-current="4" catchtap="menuTap">
+				<view>
+					6/01
+				</view>
+				<view>
+					今日特卖
+				</view>
+			</view>
+			<view class='menu6 {{menuTapCurrent=="5"? "active":""}}  menu   ' data-current="5" catchtap="menuTap">
+				<view>
+					6/02
+				</view>
+				<view>
+					爆品特卖
+				</view>
+			</view>
+			<view class='menu7 {{menuTapCurrent=="6"? "active":""}}  menu   ' data-current="6" catchtap="menuTap">
+				<view>
+					6/03
+				</view>
+				<view>
+					爆品特卖
+				</view>
+			</view>
+		</view>
+		<view class="tab1" hidden="{{menuTapCurrent!='0'}}">tab1</view>
+		<view class="tab2" hidden="{{menuTapCurrent!='1'}}">tab2</view>
+		<view class="tab3" hidden="{{menuTapCurrent!='2'}}">tab3</view>
+		<view class="tab4" hidden="{{menuTapCurrent!='3'}}">tab4</view>
+		<view class="tab5" hidden="{{menuTapCurrent!='4'}}">tab5</view>
+		<view class="tab6" hidden="{{menuTapCurrent!='5'}}">tab6</view>
+		<view class="tab7" hidden="{{menuTapCurrent!='6'}}">tab7</view>
+	</view>
+	<view class="jrxj">
+
+		<image src="/image/jrxj.png" mode="" />
+
+		<view>
+
+		</view>
+	</view>
+	<view class="fszq">
+		<image src="/image/fszq.png" mode="" />
+	</view>
+	<view class="yfzq">
+		<view class="yfsj">
+
+		</view>
+		<button>查看更多</button>
+	</view>
+
+	<view class="nvszx">
+		<image src="/image/nvszx.png" mode="" />
+		<view class="nvssj">
+
+		</view>
+		<button>查看更多</button>
+	</view>
+
+	<view class="nsxg">
+		<image src="/image/nsxg.png" mode="" />
+		<view class="nssj">
+
+		</view>
+		<button>查看更多</button>
+	</view>
+
+	<view class="mzgh">
+		<image src="/image/mzgh.png" mode="" />
+		<view class="mzsj">
+
+		</view>
+		<button>查看更多</button>
+	</view>
+	<view class="jjhw">
+		<image src="/image/jjhw.png" mode="" />
+		<view class="jjsj">
+
+		</view>
+		<button>查看更多</button>
+	</view>
+
+</view>
+<view class="tb" hidden='{{currentData != 0}}'>
+	<swiper class="sw" autoplay="true" indicator-dots="true" circular="true">
+		<swiper-item>
+			5
+
+		</swiper-item>
+		<swiper-item>
+			5
+		</swiper-item>
+		<swiper-item>
+			4
+		</swiper-item>
+		<swiper-item>
+			3
+		</swiper-item>
+		<swiper-item>
+			2
+		</swiper-item>
+		<swiper-item>
+			1
+		</swiper-item>
+	</swiper>
+	<view class="super">
+		<view class="superText">
+			<view class="superHeader">
+				<text>超级爆品</text>
+				<view>GO ></view>
+			</view>
+			<view class="cont">
+				【 3瓶 】润凰...陌生莎免浸泡
+			</view>
+			<view class="conimg">
+				<image wx:for="{{2}}" src="/image/bk-1.png" mode="widthFix"/>
+			</view>
+		</view>
+		<view class="superText">
+			<view class="superHeader">
+				<text>超级爆品</text>
+				<view style="background: cadetblue;">GO ></view>
+			</view>
+			<view class="cont" style="color: cadetblue;">
+				【 3瓶 】润凰...陌生莎免浸泡
+			</view>
+			<view class="conimg">
+				<image wx:for="{{2}}" src="/image/bk-1.png" mode="widthFix"/>
+			</view>
+		</view>
+	</view>
+
+	<view class="superShop" wx:for="{{2}}">
+		<image src="https://gd-hbimg.huaban.com/d7aa375dc53d4eeb4b78d4c4bc148404e5cea23031c81-oni22q_fw658webp" mode="widthFix"/>
+		<view class="Text">
+			<view class="shopName">
+				<text class="name">慕江南真丝女装旗舰店</text>
+				<text class="button">进入会场</text>
+			</view>
+			<view class="sales">
+				<text class="seven">7天无理由</text> 
+				<text>距离结束时间还有304天</text>
+			</view>
+			<view class="superShopUl">
+				<view class="superShopLi" wx:for="{{3}}">
+					<image src="https://gd-hbimg.huaban.com/700fd1c32807f166f183e1f02d72612d43ba910b19626-c0L02P_fw240webp" mode="widthFix"/>
+					<text>￥180</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
