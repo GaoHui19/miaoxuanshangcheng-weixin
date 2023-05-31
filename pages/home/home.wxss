@@ -1,1 +1,77 @@
-/* pages/home/home.wxss */
+.container {
+	height: 100vh;
+  }
+  
+  .scroll-container {
+	width: 100%;
+  }
+  
+  .container-sou {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #f0f0f0;
+  }
+  
+  .box-container {
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* 调整为两端对齐 */
+	margin-bottom: 20rpx;
+  }
+  
+  .search-bar {
+	width: calc(90% / 10 * 9);
+	height: 60rpx;
+	display: flex;
+	align-items: center;
+	background-color: #ffffff;
+	border-radius: 30rpx;
+	padding: 0 20rpx; /* 调整内边距 */
+	box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  }
+  
+  .search-icon {
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 10rpx;
+  }
+  
+  .search-input {
+	flex: 1;
+	height: 100%;
+	border: none;
+	outline: none;
+	font-size: 28rpx;
+	border: #ff4d4f;
+  }
+  
+  .search-button {
+	width: 120rpx;
+	height: 100%;
+	background-color: #ff4d4f; /* 红色背景 */
+	color: #ffffff;
+	border: none;
+	outline: none;
+	border-radius: 30rpx;
+	font-size: 28rpx;
+	cursor: pointer;
+  }
+  
+  .lottery {
+	width: calc(90% / 5);
+	height: 60rpx;
+	background: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40rpx;
+	color: #ff4d4f; /* 红色字体 */
+	border-radius: 30rpx;
+	border: 2rpx solid #cccccc;
+	box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  }
+  

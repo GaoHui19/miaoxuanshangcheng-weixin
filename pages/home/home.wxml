@@ -1,2 +1,16 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+<view class="container">
+  <scroll-view class="scroll-container" scroll-y bindscroll="onScroll">
+    <view class="container-sou">
+      <view class="box-container" id="boxContainer">
+        <view class="search-bar">
+          <image class="search-icon" src=""></image>
+          <input class="search-input" bindinput="onInputChange" bindtap="onSearch" placeholder="请输入关键字"></input>
+          <button class="search-button" bindtap="onSearch">搜索</button>
+        </view>
+        <button class="lottery" open-type="share" >分享</button>
+      </view>
+    </view>
+  </scroll-view>
+</view>
