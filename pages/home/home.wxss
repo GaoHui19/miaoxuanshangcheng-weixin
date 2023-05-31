@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 /* pages/home/home.wxss */
 /* 搜索 */
 .scroll-container {
+=======
+.container {
+	height: 100vh;
+  }
+  
+  .scroll-container {
+>>>>>>> 3b956782be33e4938bca31bddeb0e30316113221
 	width: 100%;
   }
   
@@ -72,6 +80,7 @@
 	border: 2rpx solid #cccccc;
 	box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1); /* 添加阴影 */
   }
+<<<<<<< HEAD
   
   /* 选项卡 */
 .set {
@@ -455,3 +464,6 @@
   display: block;
   margin: 0 auto 20rpx;
 }
+=======
+  
+>>>>>>> 3b956782be33e4938bca31bddeb0e30316113221

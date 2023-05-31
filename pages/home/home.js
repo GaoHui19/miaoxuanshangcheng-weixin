@@ -1,9 +1,6 @@
 // pages/home/home.js
 Page({
 
-    /**
-     * 页面的初始数据
-     */
     data: {
         currentData:1,
         pic: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2846167449,2464562408&fm=26&gp=0.jpg', //网络图片路径
@@ -22,6 +19,7 @@ Page({
         menuTapCurrent: current
     });
 
+<<<<<<< HEAD
 },
     /**
      * 生命周期函数--监听页面加载
@@ -93,4 +91,24 @@ Page({
       },
     
    
+=======
+    // 分享
+    onShareAppMessage() {
+        return {
+        title: '分享标题',
+        path: '/pages/index/index',
+        imageUrl: 'https://example.com/image.png'
+        }
+    },
+
+    // 跳转搜索页
+    onSearch: function() {
+        wx.navigateTo({
+          url: '/pages/search/search'
+        })
+      }
+      
+
+      
+>>>>>>> 3b956782be33e4938bca31bddeb0e30316113221
 })

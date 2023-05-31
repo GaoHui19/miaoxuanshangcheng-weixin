@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "miaoxuanshangcheng-weixin",
   "version": "1.0.0",
   "description": "",
@@ -8,6 +9,8 @@
   },
   "author": "",
   "license": "ISC",
+=======
+>>>>>>> 3b956782be33e4938bca31bddeb0e30316113221
   "dependencies": {
     "@vant/weapp": "^1.10.19",
     "tdesign-miniprogram": "^1.1.8"
